@@ -1,34 +1,26 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        nuxt-dic
-      </h1>
-      <h2 class="subtitle">
-        test dictionary
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
+  <section class="container">splash
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 
 export default {
-  components: {
-    Logo
-  }
+  data () {
+    return {
+      token: ''
+    }
+  },
+  mounted() {
+    const token = localStorage.getItem('token')
+    if (token) {
+      this.token = token
+      this.$router.replace('/statistic')
+    } else {
+      this.$router.replace('/signon')
+    }
+    
+  },
 }
 </script>
 

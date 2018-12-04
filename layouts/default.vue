@@ -1,21 +1,17 @@
 <template>
-  <div>ddd
-    <Navbar></Navbar>
+  <div>
     <nuxt/>
   </div>
 </template>
 
 <script>
 import Navbar from '~/components/Navbar'
+import Menu from '~/components/Menu'
 
 export default {
   components: {
-    Navbar
-  },
-  data () {
-    return {
-      
-    }
+    Navbar,
+    Menu
   }
 }
 </script>

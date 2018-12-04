@@ -1,15 +1,15 @@
 <template>
     <section class="container">
-      xxx
+      <Navbar></Navbar>
+      <Menu></Menu>
     </section>
   </template>
   
   <script>
-  import Logo from '~/components/Logo.vue'
   
   export default {
+    layout: 'system',
     components: {
-      Logo
     }
   }
   </script>
